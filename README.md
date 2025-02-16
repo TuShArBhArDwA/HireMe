@@ -60,6 +60,26 @@
    npm run dev
 - The application will be available at http://localhost:3000.
 
+## Environment Variables
+
+- To run this project, you need to set up the following environment variables. Create a `.env` file in the root directory and add:
+   ```env
+   MONGODB_URI=your_mongodb_connection_string
+   CLERK_API_KEY=your_clerk_api_key
+   SENTRY_DSN=your_sentry_dsn
+   VERCEL_URL=your_vercel_project_url
+
+### Configuration Instructions:
+
+- **MONGODB_URI** → Your MongoDB connection string from [MongoDB Atlas](https://www.mongodb.com/atlas) or a self-hosted MongoDB instance.  
+- **CLERK_API_KEY** → Your API key from [Clerk](https://clerk.dev/) for user authentication.  
+- **SENTRY_DSN** → Your Data Source Name (DSN) from [Sentry](https://sentry.io/) for error tracking and performance monitoring.  
+- **VERCEL_URL** → Your Vercel deployment URL (optional for production setups).  
+
+**Note:** Never expose your environment variables in public repositories. Use `.env` files locally and configure them securely in deployment environments.
+
+
+
 ## Usage
 1. **Run the development server**  
    ```sh
