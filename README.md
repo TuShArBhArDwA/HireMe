@@ -77,13 +77,42 @@ Apply for jobs or post job openings based on your role.
 - After deployment, access the live application via the provided Vercel URL.
 
 ## Contributing
-- Contributions are welcome! To contribute:
+Contributions are welcome! If you'd like to contribute, follow these steps:
 
-Fork the repo
-Create a feature branch (git checkout -b feature-name)
-Commit changes (git commit -m "Add feature")
-Push to the branch (git push origin feature-name)
-Open a pull request
+1. **Fork the repository**  
+   Click the "Fork" button on the top-right corner of the repository page.
+
+2. **Clone your forked repository**  
+   ```sh
+   git clone https://github.com/TuShArBhArDwA/HireMe.git
+   cd HireMe
+
+3. **Create a new branch**
+   ```sh
+   git checkout -b feature-name
+
+4. **Make your changes and commit them**
+   ```sh
+   git add .
+   git commit -m "Add feature: description of changes"
+
+5. **Push your changes to your forked repository**
+   ```sh
+   git push origin feature-name
+
+6. Create a Pull Request (PR)
+- Go to the original repository on GitHub.
+- Click on "Compare & pull request."
+- Add a meaningful title and description.
+- Submit the PR for review.
+
+### Guidelines
+- Follow best coding practices.
+- Write clear and concise commit messages.
+- Ensure the code is properly formatted and linted.
+- Test your changes before submitting a PR.
+
+
 ## License
 - Distributed under the MIT License. See LICENSE for details.
 
