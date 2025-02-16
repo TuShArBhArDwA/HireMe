@@ -61,10 +61,28 @@ Create a .env file in the root directory and add the following:
 MONGODB_URI=your_mongodb_connection_string
 CLERK_API_KEY=your_clerk_api_key
 SENTRY_DSN=your_sentry_dsn
-Usage
-Visit http://localhost:3000 to access the application.
-Sign up/log in as a Job Seeker or Recruiter.
-Apply for jobs or post job openings based on your role.
+
+## Usage
+1. **Run the development server**  
+   ```sh
+   npm run dev
+The application will be available at http://localhost:3000.
+
+2. **Sign up or log in**
+  - Job Seekers:
+    - Search and apply for jobs.
+    - Upload and manage resumes.
+    - Track application status.
+  - Recruiters:
+    - Post and manage job listings.
+    - View, accept, or reject applications.
+    - Access applicant resumes.
+3. **Manage applications**
+- Recruiters can accept or reject applications.
+- Job seekers can track the status of their applications.
+4. **Monitor performance (Admins/Developers)**
+- Use Sentry to track errors and optimize MongoDB queries.
+
 
 ## Deployment
 - The project is deployed on **Vercel** for seamless hosting.
@@ -100,7 +118,7 @@ Contributions are welcome! If you'd like to contribute, follow these steps:
    ```sh
    git push origin feature-name
 
-6. Create a Pull Request (PR)
+6. **Create a Pull Request (PR)**
 - Go to the original repository on GitHub.
 - Click on "Compare & pull request."
 - Add a meaningful title and description.
