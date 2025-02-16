@@ -65,22 +65,32 @@ Usage
 Visit http://localhost:3000 to access the application.
 Sign up/log in as a Job Seeker or Recruiter.
 Apply for jobs or post job openings based on your role.
-Deployment
-Deploy the frontend and backend on Vercel using:
-vercel
-Contributing
-Contributions are welcome! To contribute:
+
+## Deployment
+- The project is deployed on **Vercel** for seamless hosting.
+- To deploy the frontend and backend, use the following command:
+
+  ```sh
+  vercel
+- Ensure your Vercel CLI is installed and logged in before running the command.
+- Configure environment variables on Vercel to match your local `.env` file.
+- After deployment, access the live application via the provided Vercel URL.
+
+## Contributing
+- Contributions are welcome! To contribute:
 
 Fork the repo
 Create a feature branch (git checkout -b feature-name)
 Commit changes (git commit -m "Add feature")
 Push to the branch (git push origin feature-name)
 Open a pull request
-License
-Distributed under the MIT License. See LICENSE for details.
+## License
+- Distributed under the MIT License. See LICENSE for details.
 
 ## Contact
-- Tushar Bhardwaj - Portfolio
-- GitHub: @your-username
-- Email: tusharbhardwaj2617@example.com
+- **Tushar Bhardwaj** - [Portfolio](https://tushar-bhardwaj.vercel.app/)
+- **GitHub:** [TuShArBhArDwA](https://github.com/TuShArBhArDwA)
+- **LinkedIn:** [Tushar Bhardwaj](https://www.linkedin.com/in/bhardwajtushar2004/)
+- **Email:** [tusharbhardwaj2617@example.com](mailto:tusharbhardwaj2617@example.com)
+
 
