@@ -1,6 +1,6 @@
 # Hire Me - Full Stack Job Portal
+![image](https://github.com/user-attachments/assets/be77c903-df41-409b-b998-9f55387fbff9)
 
-![Hire Me](https://your-image-url.com) <!-- Add a relevant project image -->
 
 ## Table of Contents
 - [About the Project](#about-the-project)
@@ -118,6 +118,7 @@ Contributions are welcome! If you'd like to contribute, follow these steps:
 
 ## Contact
 - **Tushar Bhardwaj** - [Portfolio](https://tushar-bhardwaj.vercel.app/)
+- **Connect 1:1** [Topmate](https://topmate.io/tusharbhardwaj)
 - **GitHub:** [TuShArBhArDwA](https://github.com/TuShArBhArDwA)
 - **LinkedIn:** [Tushar Bhardwaj](https://www.linkedin.com/in/bhardwajtushar2004/)
 - **Email:** [tusharbhardwaj2617@example.com](mailto:tusharbhardwaj2617@example.com)
