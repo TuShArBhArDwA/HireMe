@@ -66,7 +66,7 @@ SENTRY_DSN=your_sentry_dsn
 1. **Run the development server**  
    ```sh
    npm run dev
-The application will be available at http://localhost:3000.
+  - The application will be available at http://localhost:3000.
 
 2. **Sign up or log in**
   - Job Seekers:
