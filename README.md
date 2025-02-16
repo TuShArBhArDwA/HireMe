@@ -47,20 +47,18 @@
    ```sh
    git clone https://github.com/TuShArBhArDwA/HireMe.git
    cd HireMe
-Install dependencies:
+2. **Install dependencies**
+   ```sh
+   npm install
 
-npm install
-Set up environment variables (see Environment Variables).
+3. **Set up environment variables**
+- Create a `.env` file in the root directory.
+- Add the required environment variables (see Environment Variables).
 
-Start the development server:
-
-npm run dev
-Environment Variables
-Create a .env file in the root directory and add the following:
-
-MONGODB_URI=your_mongodb_connection_string
-CLERK_API_KEY=your_clerk_api_key
-SENTRY_DSN=your_sentry_dsn
+4. **Start the development server**
+   ```sh
+   npm run dev
+- The application will be available at http://localhost:3000.
 
 ## Usage
 1. **Run the development server**  
