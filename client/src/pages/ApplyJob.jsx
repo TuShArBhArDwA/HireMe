@@ -39,19 +39,19 @@ const ApplyJob = () => {
             <div className='text-center md:text-left text-neutral-700'>
               <h1 className='text-2xl sm:text-4xl font-medium'>{JobData.title}</h1>
               <div className='flex flex-row flex-wrap max-md:justify-center gap-y-2 gap-6 items-center text-gray-600 mt-2'>
-                <span>
+                <span className='flex items-center gap-1'>
                 <img src={assets.suitcase_icon} alt="" />
                 {JobData.companyId.name}
                 </span>
-                <span>
+                <span className='flex items-center gap-1'>
                   <img src={assets.location_icon} alt="" />
                   {JobData.location}
                 </span>
-                <span>
+                <span className='flex items-center gap-1'>
                   <img src={assets.person_icon} alt="" />
                   {JobData.level}
                 </span>
-                <span>
+                <span className='flex items-center gap-1'>
                   <img src={assets.money_icon} alt="" />
                   CTC: {kConvert.convertTo(JobData.salary)}
                 </span>
@@ -59,12 +59,21 @@ const ApplyJob = () => {
             </div>
           </div>
 
-          <div>
-            <button>Apply Now</button>
-            <p>Posted {moment(JobData.date).fromNow()}</p>
+          <div className='flex flex-col justify-center text-end text-sm max-md:mx-auto max-md:text-center'>
+            <button className='bg-blue-600 p-2.5 px-10 text-white rounded'>Apply Now</button>
+            <p className='mt-1 text-gray-600 '>Posted {moment(JobData.date).fromNow()}</p>
           </div>
 
         </div>
+
+    <div className='flex flex-col lg:flex-row justify-between items-start'>
+      <div className='w-full lg:w-2/3'>
+        <h2 className='font-bold text-2xl mb-4'>Job description</h2>
+        <div className='rich-text' dangerouslySetInnerHTML={{__html:JobData.description}}></div>
+        <button className='bg-blue-600 p-2.5 px-10 text-white rounded mt-10'>Apply Now</button>
+      </div>
+    </div>
+
       </div>
     </div>
     </>
