@@ -1,5 +1,6 @@
 # Hire Me - Full Stack Job Portal
-![image](https://github.com/user-attachments/assets/be77c903-df41-409b-b998-9f55387fbff9)
+![image](https://github.com/user-attachments/assets/10b7f3dd-8642-472f-864a-7850bc7f8c24)
+
 
 
 ## Table of Contents
