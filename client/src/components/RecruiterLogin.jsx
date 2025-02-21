@@ -43,6 +43,12 @@ const RecruiterLogin = () => {
         <button className='bg-blue-600 w-full text-white py-2 rounded-full'>
             {state==='Login'?'login':'create account'}
         </button>
+        {
+            state==='Login'
+            ?<p className='mt-5 text-center'>Don't have an account? <span  className='text-blue-600 cursor-pointer' onClick={()=>setState("Sign Up")}>Sign Up</span></p>
+            :<p className='mt-5 text-center'>Already have an account? <span className='text-blue-600 cursor-pointer' onClick={()=>setState("Login")}>Login</span></p>
+        }
+
       </form>
     </div>
   )
