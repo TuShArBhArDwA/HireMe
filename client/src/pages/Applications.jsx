@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { assets } from '../assets/assets'
+import { assets, jobsApplied } from '../assets/assets'
+import moment from 'moment'
 
 const Applications = () => {
 
@@ -36,6 +37,32 @@ const[resume,setResume]=useState(null)
             </div>
           }
         </div>
+          <h2>Jobs Applied</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Job Title</th>
+                <th>Location</th>
+                <th>Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {jobsApplied.map((job,index)=>true?(
+                <tr>
+                  <td>
+                    <img src={job.logo} alt="" />
+                    {job.company}
+                  </td>
+                  <td>{job.title}</td>
+                  <td>{job.location}</td>
+                  <td>{moment(job.date).format('ll')}</td>
+                  <td>{job.status}</td>
+                </tr>
+              ):(null))}
+            </tbody>
+          </table>
       </div>
       <Footer/>
       </>
