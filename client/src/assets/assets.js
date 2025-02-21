@@ -33,10 +33,15 @@ import lock_icon from './lock_icon.svg'
 import samsung_logo from './samsung_logo.png'
 import adobe_logo from './adobe_logo.png'
 import amazon_logo from './amazon_logo.png'
+import favicon from './favicon.png'
+import main_logo from './main_logo.png'
+
 
 export const assets = {
     logo,
     search_icon,
+    main_logo,
+    favicon,
     cross_icon,
     upload_area,
     company_icon,
