@@ -1,14 +1,17 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigate, NavLink } from 'react-router-dom'
 import { assets } from '../assets/assets'
 
 const Dashboard = () => {
+
+  const navigate=useNavigate()
+
   return (
     <div className='min-h-screen'>
       {/* Navbar for Recruiter Panel */}
       <div className='shadow py-4'>
         <div className='px-5 flex justify-between items-center'>
-          <img className='max-sm:w-32 cursor-pointer' src={assets.logo} alt="" />
+          <img onClick={e=>navigate('/')} className='max-sm:w-32 cursor-pointer' src={assets.logo} alt="" />
           <div className='flex items-center gap-3'>
             <p className='max-sm:hidden'>Welcome, Tushar</p>
             <div className='relative group'>
@@ -22,6 +25,32 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+
+      <div className='flex items-start'>
+        {/* Left Sidebar with option to add job, manage job, view application */}
+        <div className='inline-block min-h-screen border-r-2'>
+          <ul className='flex flex-col items-start pt-5 text-gray-800'>
+            <NavLink to={'/dashboard/add-job'}>
+              <img src={assets.add_icon} alt="" />
+              <p>Add Job</p>
+            </NavLink>
+
+            <NavLink to={'/dashboard/manage-jobs'}>
+              <img src={assets.home_icon} alt="" />
+              <p>Manage Jobs</p>
+            </NavLink>
+
+            <NavLink to={'/dashboard/view-applications'}>
+              <img src={assets.person_tick_icon} alt="" />
+              <p>View Applications</p>
+            </NavLink>
+          </ul>
+        </div>
+        <div>
+          <Outlet/>
+        </div>
+      </div>
+
     </div>
   )
 }
