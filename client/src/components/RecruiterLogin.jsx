@@ -12,7 +12,7 @@ const RecruiterLogin = () => {
     const[image,setImage]=useState(false)
 
     const[isTextDataSubmitted,setIsTextDataSubmitted]=useState(false)
-    const {setShowRecruiterLogin}=useContext(AppContext)
+    const {setShowRecruiterLogin, backendUrl}=useContext(AppContext)
     const onSubmitHandler=async(e)=>{
         e.preventDefault()
         if(state=="Sign Up"&&!isTextDataSubmitted){
