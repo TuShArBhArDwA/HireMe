@@ -5,7 +5,6 @@ import generateToken from "../utils/generateToken.js"
 
 // Register a new company
 export const registerCompany=async(req,res)=>{
-    
     const {name,email,password}=req.body
     const imageFile=req.file
     if(!name||!email||!password||!imageFile){
@@ -18,7 +17,7 @@ export const registerCompany=async(req,res)=>{
         }
         const salt=await bcrypt.genSalt(10)
         const hashPassword=await bcrypt.hash(password,salt)
-        const imageUpload=await connectCloudinary.uploader.upload(imageFile.path)
+        const imageUpload=await cloudinary.uploader.upload(imageFile.path)
         const company=await Company.create({
             name,
             email,
