@@ -9,6 +9,7 @@ import moment from 'moment'
 import JobCard from '../components/JobCard'
 import Footer from '../components/Footer'
 import axios from 'axios'
+import { toast } from 'react-toastify'
 
 const ApplyJob = () => {
 
@@ -16,7 +17,7 @@ const ApplyJob = () => {
 
   const[JobData,setJobData]=useState(null)
 
-  const {jobs,backendUrl}=useContext(AppContext)
+  const {jobs,backendUrl,userData, userApplications}=useContext(AppContext)
   const fetchJob=async()=>{
 
     try{
@@ -33,6 +34,19 @@ const ApplyJob = () => {
       toast.error(error.message)
     }
 
+  }
+
+  const applyHandler=async()=>{
+    try{
+      if(!userData){
+        return toast.error('Login to apply for jobs')
+      }
+      if(!userData.resume){
+        return toast.error('Upload resume to apply')
+      }
+    }catch(error){
+
+    }
   }
 
   useEffect(()=>{
@@ -71,7 +85,7 @@ const ApplyJob = () => {
           </div>
 
           <div className='flex flex-col justify-center text-end text-sm max-md:mx-auto max-md:text-center'>
-            <button className='bg-blue-600 p-2.5 px-10 text-white rounded'>Apply Now</button>
+            <button onClick={applyHandler} className='bg-blue-600 p-2.5 px-10 text-white rounded'>Apply Now</button>
             <p className='mt-1 text-gray-600 '>Posted {moment(JobData.date).fromNow()}</p>
           </div>
 
@@ -81,7 +95,7 @@ const ApplyJob = () => {
       <div className='w-full lg:w-2/3'>
         <h2 className='font-bold text-2xl mb-4'>Job description</h2>
         <div className='rich-text' dangerouslySetInnerHTML={{__html:JobData.description}}></div>
-        <button className='bg-blue-600 p-2.5 px-10 text-white rounded mt-10'>Apply Now</button>
+        <button onClick={applyHandler} className='bg-blue-600 p-2.5 px-10 text-white rounded mt-10'>Apply Now</button>
       </div>
       {/* Right Section More Jobs  */}
       <div className='w-full lg:w-1/3 mt-8 lg:mt-0 lg:ml-8 space-y-5'>
