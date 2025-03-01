@@ -9,10 +9,9 @@ export const getUserData=async(req,res)=>{
     const userId=req.auth.userId
     try{
         const user=await User.findById(userId)
-        //  Commenting this verification as facing issue in webhook/ api of clerk
-        // if(!user){
-        //     return res.json({success:false,message:'User Not Found'})
-        // }
+        if(!user){
+            return res.json({success:false,message:'User Not Found'})
+        }
         res.json({success:true,user})
     } catch(error){
         res.json({success:false,message:error.message})

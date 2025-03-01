@@ -104,7 +104,7 @@ export const AppContextProvider=(props)=>{
 
     const value={
         setSearchFilter,searchFilter, isSearched, setIsSearched, jobs, setJobs, showRecruiterLogin,setShowRecruiterLogin,
-        companyToken,setCompanyToken,companyData,setCompanyData, backendUrl, userData, setUserData,userApplications, setUserApplications
+        companyToken,setCompanyToken,companyData,setCompanyData, backendUrl, userData, setUserData,userApplications, setUserApplications, fetchUserData
     }
     return (<AppContext.Provider value={value}>
         {props.children}
