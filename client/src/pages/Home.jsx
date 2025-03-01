@@ -11,7 +11,7 @@ const Home = () => {
       <Navbar/>
       <Hero/>
       <JobListing/>
-      <AppDownload/>
+      {/* <AppDownload/> */}
       <Footer/>
     </div>
   )
