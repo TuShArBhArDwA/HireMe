@@ -79,14 +79,14 @@ const updateResume=async()=>{
               </tr>
             </thead>
             <tbody>
-              {jobsApplied.map((job,index)=>true?(
-                <tr>
+              {userApplications.map((job,index)=>true?(
+                <tr key={index}>
                   <td className='py-3 px-4 flex items-center gap-2 border-b'>
-                    <img className='w-8 h-8' src={job.logo} alt="" />
-                    {job.company}
+                    <img className='w-8 h-8' src={job.companyId.image} alt="" />
+                    {job.companyId.name}
                   </td>
-                  <td className='py-2 px-4 border-b' >{job.title}</td>
-                  <td className='py-2 px-4 border-b max-sm:hidden'>{job.location}</td>
+                  <td className='py-2 px-4 border-b' >{job.jobId.title}</td>
+                  <td className='py-2 px-4 border-b max-sm:hidden'>{job.jobId.location}</td>
                   <td className='py-2 px-4 border-b max-sm:hidden'>{moment(job.date).format('ll')}</td>
                   <td className='py-2 px-4 border-b'>
                     <span className={`${job.status==='Accepted'?'bg-green-100':job.status==='Rejected'?'bg-red-100':'bg-blue-100'} px-4 py-1 rounded`}>
