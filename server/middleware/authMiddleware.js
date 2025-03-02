@@ -14,6 +14,7 @@ export const protectCompany=async(req,res,next)=>{
 
 
     } catch(error){
+        
         res.json({success:false,message:error.message})
     }
 }

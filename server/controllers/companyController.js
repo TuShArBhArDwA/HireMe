@@ -37,6 +37,7 @@ export const registerCompany=async(req,res)=>{
             token: generateToken(company._id)
         })
     } catch(error){
+        
         res.json({success:false,message: error.message})
     }
 }
@@ -111,10 +112,11 @@ export const getCompanyJobApplicants=async(req,res)=>{
         .populate('userId','name image resume')
         .populate('jobId','title location category level salary')
         .exec()
-
+        
         return res.json({success:true,applications})
 
     } catch(error){
+
         res.json({success:false,message:error.message})
     }
 }

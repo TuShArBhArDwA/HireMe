@@ -14,6 +14,7 @@ export const getUserData=async(req,res)=>{
         }
         res.json({success:true,user})
     } catch(error){
+        
         res.json({success:false,message:error.message})
     }
 }

@@ -90,6 +90,7 @@ export const AppContextProvider=(props)=>{
             if(data.success){
                 setUserApplications(data.applications)
             }  else{
+                // here is error
                 toast.error(data.message)
             }
         } catch(error){
