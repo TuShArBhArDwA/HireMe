@@ -3,6 +3,7 @@ import { assets, viewApplicationsPageData } from '../assets/assets'
 import { AppContext } from '../context/AppContext'
 import Loading from '../components/Loading'
 import { toast } from 'react-toastify'
+import axios from 'axios'
 
 const ViewApplications = () => {
   const {backendUrl,companyToken}=useContext(AppContext)
