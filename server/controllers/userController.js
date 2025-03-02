@@ -46,11 +46,12 @@ export const applyForJob=async(req,res)=>{
 }
 
 // Get user applied applications
+
+//  This function have bug 
 export const getUserJobApplications=async(req,res)=>{
     try{
         const userId=req.auth.userId
-        const applications=await JobApplication.findById({userId})
-        .populate('companyId','name email image')
+        const applications=await JobApplication.find({userId})
         .populate('jobId','title description location category level salary')
         .exec()
         if(!applications){
@@ -58,6 +59,7 @@ export const getUserJobApplications=async(req,res)=>{
         }
         return res.json({success:true,applications})
     } catch(error){
+        console.log("help")
         res.json({success:false,message:error.message})
     }
 }
