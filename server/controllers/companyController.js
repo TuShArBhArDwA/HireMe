@@ -1,5 +1,5 @@
 import Company from "../models/Company.js"
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 import {v2 as cloudinary} from 'cloudinary'
 import generateToken from "../utils/generateToken.js"
 // import Job from "../models/job.js"
@@ -17,8 +17,7 @@ export const registerCompany=async(req,res)=>{
         if(companyExists){
             return res.json({success:false,message:'Company already registered'})
         }
-        const salt=await bcrypt.genSalt(10)
-        const hashPassword=await bcrypt.hash(password,salt)
+        const hashPassword = await bcrypt.hash(password, 10)
         const imageUpload=await cloudinary.uploader.upload(imageFile.path)
         const company=await Company.create({
             name,
