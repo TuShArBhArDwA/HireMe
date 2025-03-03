@@ -35,7 +35,7 @@ import adobe_logo from './adobe_logo.png'
 import amazon_logo from './amazon_logo.png'
 import favicon from './favicon.png'
 import main_logo from './main_logo.png'
-
+import hlogo from './hlogo.png'
 
 export const assets = {
     logo,
