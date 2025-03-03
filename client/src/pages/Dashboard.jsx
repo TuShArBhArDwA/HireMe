@@ -27,7 +27,7 @@ const Dashboard = () => {
       {/* Navbar for Recruiter Panel */}
       <div className='shadow py-4'>
         <div className='px-5 flex justify-between items-center'>
-          <img onClick={e=>navigate('/')} className='max-sm:w-32 cursor-pointer w-[180px] h-[38px]' src={assets.main_logo} alt="" />
+          <img onClick={e=>navigate('/')} className='max-sm:w-32 cursor-pointer w-[180px] h-[38px]' src={assets.hlogo} alt="" />
           {companyData&&(
           <div className='flex items-center gap-3'>
             <p className='max-sm:hidden'>Welcome, {companyData.name}</p>
