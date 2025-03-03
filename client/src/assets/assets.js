@@ -74,6 +74,7 @@ export const assets = {
     lock_icon,
     samsung_logo,
     adobe_logo,
+    hlogo,
     amazon_logo
 }
 
