@@ -152,7 +152,7 @@ Contributions are welcome! If you'd like to contribute, follow these steps:
 
 
 ## License
-- Distributed under the MIT License. See LICENSE for details.
+- This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 - **Meet T-Bot** - [Discover My Work](https://t-bot-blush.vercel.app/)
